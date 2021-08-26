@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
 import WebVRPolyfill from "webvr-polyfill";
-import { ARButton } from "three/examples/jsm/webxr/ARButton.js";
+import { VRButton } from "three/examples/jsm/webxr/VRButton.js";
 
 // // WebVR
 // let vrdisplay;
@@ -188,7 +188,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.xr.enabled = true;
 
 // VR Button
-document.body.appendChild(ARButton.createButton(renderer));
+document.body.appendChild(VRButton.createButton(renderer));
 
 /**
  * Animate
