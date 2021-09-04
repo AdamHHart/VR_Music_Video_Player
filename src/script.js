@@ -133,6 +133,16 @@ const materialSky = new THREE.MeshBasicMaterial({
 const meshSky = new THREE.Mesh(geometrySky, materialSky);
 scene.add(meshSky);
 
+// // Panoramic Sphere Animation
+// animate();
+// function animate() {
+//   meshSky.rotation.y += 0.01; //rotate automatically
+//   // Render the scene.
+//   renderer.render(scene, camera);
+//   //Tell the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation
+//   requestAnimationFrame(animate);
+// }
+
 /**
  * Sizes
  */
@@ -206,6 +216,7 @@ document.body.appendChild(VRButton.createButton(renderer));
 const clock = new THREE.Clock();
 
 renderer.setAnimationLoop(function () {
+  meshSky.rotation.y += 0.002;
   renderer.render(scene, camera);
 });
 
