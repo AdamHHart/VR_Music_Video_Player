@@ -123,6 +123,16 @@ const particlesMaterial = new THREE.PointsMaterial({
 const particles = new THREE.Points(particlesGeometry, particlesMaterial);
 scene.add(particles);
 
+// Panoramic Sphere Geometry
+const geometrySky = new THREE.SphereBufferGeometry(5, 40, 20);
+//Create material of the sky. Here we give it a green color and display its wireframe.
+const materialSky = new THREE.MeshBasicMaterial({
+  color: 0x00ff00,
+  wireframe: true,
+});
+const meshSky = new THREE.Mesh(geometrySky, materialSky);
+scene.add(meshSky);
+
 /**
  * Sizes
  */
