@@ -124,11 +124,20 @@ const particles = new THREE.Points(particlesGeometry, particlesMaterial);
 scene.add(particles);
 
 // Panoramic Sphere Geometry
-const geometrySky = new THREE.SphereBufferGeometry(5, 40, 20);
+const geometrySky = new THREE.SphereGeometry(5, 40, 20);
+geometrySky.scale(-1, 1, 1);
+
+// Video
+const video = { 0: "textures/videos/sailboat.mp4" };
+// video.get(0).play();
+
+const panoTexture = new THREE.VideoTexture(video);
+
 //Create material of the sky. Here we give it a green color and display its wireframe.
 const materialSky = new THREE.MeshBasicMaterial({
-  color: 0x00ff00,
-  wireframe: true,
+  map: panoTexture,
+  // color: 0x00ff00,
+  // wireframe: true,
 });
 const meshSky = new THREE.Mesh(geometrySky, materialSky);
 scene.add(meshSky);
