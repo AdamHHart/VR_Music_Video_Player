@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script> src="https://aframe.io/releases/0.2.0/aframe.min.js"</script>
     <title>17 - Particles</title>
+    <video id="video" loop="" muted="" crossorigin="anonymous" playsinline="" style="display:none">
+        <!-- <source src="https://www.youtube.com/watch?v=y0k8Akk1yN0&ab_channel=karosieben360"> -->
+        <source src="../static/textures/videos/sailboat.mp4">
+    </video>
+    <audio controls autoplay>
+        <source src="../static/textures/audio/varou.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    <script type="text/javascript">
+        window.onload = function(){
+           document.getElementById("video");
+           video.play()
+        };
+    </script>
 </head>
 <body>
     <canvas class="webgl">
-
-
-
     </canvas>
 </body>
 </html>

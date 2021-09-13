@@ -128,7 +128,12 @@ const geometrySky = new THREE.SphereGeometry(5, 40, 20);
 geometrySky.scale(-1, 1, 1);
 
 // Video
-const video = { 0: "textures/videos/sailboat.mp4" };
+// document.onload(() => {
+//   const video = document.getElementById("video");
+//   video.play();
+// });
+
+// const video = { 0: "textures/videos/sailboat.mp4" };
 // video.get(0).play();
 
 const panoTexture = new THREE.VideoTexture(video);
